@@ -49,6 +49,19 @@ root = tk.Tk()
 root.title('Cost-Benefit Analysis Toolkit')
 root.geometry('900x700')  # Increased window size to accommodate charts
 
+# Initialize ttk.Style and set the 'clam' theme
+style = ttk.Style()
+style.theme_use('clam')
+
+# Configure the 'TButton' style
+style.configure('TButton',
+                background='#d0e8f1',
+                foreground='black',
+                padding=6)
+style.map('TButton',
+          background=[('active', '#87CEFA')],
+          foreground=[('active', 'black')])
+
 # Create a Scrollable Frame to hold the Notebook
 scrollable_container = ScrollableFrame(root)
 scrollable_container.pack(fill='both', expand=True)
